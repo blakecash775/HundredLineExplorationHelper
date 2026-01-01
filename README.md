@@ -1,4 +1,4 @@
-# The Hundred Line: Last Defense Academy - Exploration Helper
+# The Hundred Line -Last Defense Academy- - Exploration Helper
 
 A simple overlay tool that reads your screen during exploration events and shows you the possible outcomes for each choice.
 
