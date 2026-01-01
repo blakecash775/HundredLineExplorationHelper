@@ -60,8 +60,8 @@ The `exploration_events.json` file contains all known exploration events and the
 - Make sure both Pillow and pytesseract are installed
 - Make sure Tesseract OCR is installed on your system
 
-**"Events not being read"**
-- Position the helper window where it won't overlap with the game's event text
+**Events not being read**
+- Make sure the window isn't covering the text in-game, it's screenshotting you're entire screen not just the game window.
 
 ## Accuracy
 
