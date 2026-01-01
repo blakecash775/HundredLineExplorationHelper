@@ -7,12 +7,11 @@ import json
 import tkinter as tk
 from tkinter import ttk, scrolledtext
 from pathlib import Path
-from difflib import SequenceMatcher
 import threading
 import time
 
 try:
-    from PIL import ImageGrab
+    from PIL import ImageGrab, ImageOps
     PIL_AVAILABLE = True
 except ImportError:
     PIL_AVAILABLE = False
@@ -41,6 +40,34 @@ if sys.platform == 'win32':
 
 
 class ExplorationHelper:
+    # Precomputed constants for matching
+    STOPWORDS = frozenset({
+        'you', 'the', 'a', 'an', 'it', 'is', 'are', 'was', 'were', 'be',
+        'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will',
+        'would', 'could', 'should', 'may', 'might', 'must', 'shall', 'can',
+        'to', 'of', 'in', 'for', 'on', 'with', 'at', 'by', 'from', 'as',
+        'into', 'through', 'during', 'before', 'after', 'above', 'below',
+        'between', 'under', 'again', 'further', 'then', 'once', 'here',
+        'there', 'when', 'where', 'why', 'how', 'all', 'each', 'few',
+        'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not',
+        'only', 'own', 'same', 'so', 'than', 'too', 'very', 'just',
+        'and', 'but', 'if', 'or', 'because', 'until', 'while', 'this',
+        'that', 'these', 'those', 'what', 'which', 'who', 'whom',
+        'find', 'see', 'look', 'looks', 'looking', 'found', 'seems',
+        'seem', 'might', 'maybe', 'something', 'anything', 'nothing'
+    })
+
+    DISTINCTIVE_WORDS = frozenset([
+        'altar', 'statue', 'offerings', 'mummy', 'mushroom',
+        'quicksand', 'spiderweb', 'beehive', 'minecart', 'dynamite',
+        'revolver', 'roulette', 'gymnasium', 'pharmacy', 'oasis',
+        'butterflies', 'carnivorous', 'greenhouse', 'mannequins',
+        'graffiti', 'talisman', 'effigy', 'underwear', 'excavator',
+        'armory', 'cassette', 'drone', 'robot', 'bomb', 'squall',
+        'playground', 'vending', 'barrel', 'bridge', 'sword',
+        'boxing', 'arcade', 'batting', 'invader', 'ghost'
+    ])
+
     def __init__(self):
         self.events = []
         self.load_events()
@@ -50,20 +77,49 @@ class ExplorationHelper:
         self.setup_gui()
 
     def load_events(self):
-        """Load exploration events from JSON file."""
+        """Load exploration events from JSON file and precompute matching data."""
         script_dir = Path(__file__).parent
         events_file = script_dir / "exploration_events.json"
 
         try:
             with open(events_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-                self.events = data.get('events', [])
+                raw_events = data.get('events', [])
         except FileNotFoundError:
             print(f"Warning: {events_file} not found. Using empty event list.")
-            self.events = []
+            raw_events = []
         except json.JSONDecodeError as e:
             print(f"Warning: Failed to parse events file: {e}")
-            self.events = []
+            raw_events = []
+
+        # Precompute matching data for each event
+        self.events = []
+        for event in raw_events:
+            prompt_lower = event['prompt'].lower()
+            words = prompt_lower.split()
+
+            # Precompute 3-word phrases
+            phrases = [' '.join(words[i:i+3]) for i in range(len(words) - 2)]
+
+            # Precompute meaningful words (not stopwords, len > 2)
+            meaningful = [w for w in words if w not in self.STOPWORDS and len(w) > 2]
+
+            # Precompute long words (6+ chars)
+            long_words = [w for w in words if len(w) >= 6]
+
+            # Check if has distinctive word
+            has_distinctive = bool(set(words) & self.DISTINCTIVE_WORDS)
+
+            self.events.append({
+                **event,
+                '_prompt_lower': prompt_lower,
+                '_phrases': phrases,
+                '_meaningful': meaningful,
+                '_meaningful_count': len(meaningful) if meaningful else 1,
+                '_long_words': long_words,
+                '_long_count': len(long_words) if long_words else 1,
+                '_has_distinctive': has_distinctive
+            })
 
     def setup_gui(self):
         """Set up the Tkinter GUI."""
@@ -313,80 +369,43 @@ class ExplorationHelper:
         # Capture entire screen
         screenshot = ImageGrab.grab()
 
-        # Run OCR
-        text = pytesseract.image_to_string(screenshot)
+        # Optimize image for faster OCR: grayscale and scale down
+        screenshot = ImageOps.grayscale(screenshot)
+        new_size = (screenshot.width // 2, screenshot.height // 2)
+        screenshot = screenshot.resize(new_size)
+
+        # Run OCR with optimized config
+        text = pytesseract.image_to_string(screenshot, config='--psm 6')
         return text.lower()
 
     def find_best_match(self, screen_text):
-        """Find the best matching event from the screen text."""
-        # Common words to ignore when matching
-        stopwords = {
-            'you', 'the', 'a', 'an', 'it', 'is', 'are', 'was', 'were', 'be',
-            'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will',
-            'would', 'could', 'should', 'may', 'might', 'must', 'shall', 'can',
-            'to', 'of', 'in', 'for', 'on', 'with', 'at', 'by', 'from', 'as',
-            'into', 'through', 'during', 'before', 'after', 'above', 'below',
-            'between', 'under', 'again', 'further', 'then', 'once', 'here',
-            'there', 'when', 'where', 'why', 'how', 'all', 'each', 'few',
-            'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not',
-            'only', 'own', 'same', 'so', 'than', 'too', 'very', 'just',
-            'and', 'but', 'if', 'or', 'because', 'until', 'while', 'this',
-            'that', 'these', 'those', 'what', 'which', 'who', 'whom',
-            'find', 'see', 'look', 'looks', 'looking', 'found', 'seems',
-            'seem', 'might', 'maybe', 'something', 'anything', 'nothing'
-        }
-
+        """Find the best matching event from the screen text using precomputed data."""
         best_match = None
         best_score = 0.0
-        threshold = 0.4  # Minimum similarity threshold
-
-        screen_lower = screen_text.lower()
+        threshold = 0.4
 
         for event in self.events:
-            prompt = event['prompt'].lower()
-
-            # Method 1: Check if significant portion of prompt is in screen text as substring
-            # Look for key phrases (3+ word sequences)
-            words = prompt.split()
+            # Method 1: Check precomputed 3-word phrases
             substring_score = 0
-            for i in range(len(words) - 2):
-                phrase = ' '.join(words[i:i+3])
-                if phrase in screen_lower:
-                    substring_score = 0.8  # Strong match if 3-word phrase found
+            for phrase in event['_phrases']:
+                if phrase in screen_text:
+                    substring_score = 0.8
                     break
 
-            # Method 2: Check meaningful words (excluding stopwords)
-            meaningful_words = [w for w in words if w.lower() not in stopwords and len(w) > 2]
-            if meaningful_words:
-                matching_meaningful = sum(1 for word in meaningful_words if word in screen_lower)
-                word_score = matching_meaningful / len(meaningful_words)
-            else:
-                word_score = 0
+            # Method 2: Check precomputed meaningful words
+            matching_meaningful = sum(1 for w in event['_meaningful'] if w in screen_text)
+            word_score = matching_meaningful / event['_meaningful_count']
 
-            # Method 3: Look for distinctive long words (6+ chars)
-            long_words = [w for w in words if len(w) >= 6]
-            if long_words:
-                matching_long = sum(1 for word in long_words if word in screen_lower)
-                long_word_score = matching_long / len(long_words)
-            else:
-                long_word_score = 0
+            # Method 3: Check precomputed long words
+            matching_long = sum(1 for w in event['_long_words'] if w in screen_text)
+            long_word_score = matching_long / event['_long_count']
 
-            # Combine scores - prioritize substring matches and long word matches
+            # Combine scores
             score = max(substring_score, word_score * 0.7 + long_word_score * 0.3)
 
-            # Bonus for matching distinctive words
-            distinctive_words = ['altar', 'statue', 'offerings', 'mummy', 'mushroom',
-                               'quicksand', 'spiderweb', 'beehive', 'minecart', 'dynamite',
-                               'revolver', 'roulette', 'gymnasium', 'pharmacy', 'oasis',
-                               'butterflies', 'carnivorous', 'greenhouse', 'mannequins',
-                               'graffiti', 'talisman', 'effigy', 'underwear', 'excavator',
-                               'armory', 'cassette', 'drone', 'robot', 'bomb', 'squall',
-                               'playground', 'vending', 'barrel', 'bridge', 'sword',
-                               'boxing', 'arcade', 'batting', 'invader', 'ghost']
-            for word in distinctive_words:
-                if word in prompt and word in screen_lower:
-                    score += 0.3
-                    break
+            # Bonus for distinctive words (precomputed flag)
+            if event['_has_distinctive'] and any(w in screen_text for w in event['_prompt_lower'].split() if w in self.DISTINCTIVE_WORDS):
+                score += 0.3
 
             if score > best_score and score >= threshold:
                 best_score = score
