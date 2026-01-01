@@ -48,15 +48,11 @@ Or just run the script by double clicking if you have python set up.
 - **Scan Once**: Takes a single screenshot and attempts to match an event.
 - **Manual Search**: Type any keywords from the event text to look it up directly.
 
-### Tips
-
-- Position the helper window where it won't overlap with the game's event text
-- The scanner checks once per second
-- If auto-detection isn't working well, use Manual Search with a few distinctive words from the event
+  Poll interval is once per second.
 
 ## Event Data
 
-The `exploration_events.json` file contains all known exploration events and their outcomes. The outcome format shows the possible results separated by `|` when there are multiple possibilities.
+The `exploration_events.json` file contains all known exploration events and their outcomes. The outcome format shows the possible results separated by `|` when there are multiple possibilities. You can freely edit this and it'll work fine as long as it keeps with the formatting.
 
 ## Troubleshooting
 
@@ -64,10 +60,8 @@ The `exploration_events.json` file contains all known exploration events and the
 - Make sure both Pillow and pytesseract are installed
 - Make sure Tesseract OCR is installed on your system
 
-**Events not being detected**
-- Ensure the game text is clearly visible on screen
-- Try using Manual Search as a fallback
-- OCR works best with clear, unobstructed text
+**"Events not being read"**
+- Position the helper window where it won't overlap with the game's event text
 
 ## Accuracy
 
