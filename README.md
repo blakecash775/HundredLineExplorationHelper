@@ -61,7 +61,7 @@ The `exploration_events.json` file contains all known exploration events and the
 - Make sure Tesseract OCR is installed on your system
 
 **Events not being read**
-- Make sure the window isn't covering the text in-game, it's screenshotting you're entire screen not just the game window.
+- Make sure the window isn't covering the text in-game.
 
 ## Accuracy
 
