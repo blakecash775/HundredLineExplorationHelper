@@ -40,6 +40,8 @@ The screen reading feature requires Tesseract OCR to be installed on your system
 python hundred_line_helper.py
 ```
 
+Or just run the script by double clicking if you have python set up.
+
 ### Controls
 
 - **Start Scanning**: Begins continuous screen monitoring. When an exploration event is detected, the choices and outcomes are displayed automatically.
