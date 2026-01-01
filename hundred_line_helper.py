@@ -211,8 +211,6 @@ class ExplorationHelper:
         self.results_text.tag_configure('header', foreground='#00ff88', font=('Consolas', 11, 'bold'))
         self.results_text.tag_configure('choice', foreground='#ffcc00')
         self.results_text.tag_configure('outcome', foreground='#88ccff')
-        self.results_text.tag_configure('requirement', foreground='#ff8888')
-        self.results_text.tag_configure('category', foreground='#aa88ff')
 
         # Show requirements info
         self.show_requirements_info()
@@ -438,25 +436,13 @@ class ExplorationHelper:
 
     def display_event_inline(self, event):
         """Display event details (appends to current text)."""
-        self.results_text.insert(tk.END, "EVENT: ", 'header')
-        self.results_text.insert(tk.END, event['prompt'] + "\n")
-
-        if 'category' in event:
-            self.results_text.insert(tk.END, "Category: ", 'category')
-            self.results_text.insert(tk.END, event['category'] + "\n")
-
-        self.results_text.insert(tk.END, "\n")
+        self.results_text.insert(tk.END, event['prompt'] + "\n\n", 'header')
 
         for i, choice in enumerate(event.get('choices', []), 1):
             self.results_text.insert(tk.END, f"  [{i}] ", 'choice')
             self.results_text.insert(tk.END, choice['text'] + "\n", 'choice')
             self.results_text.insert(tk.END, f"      → ", 'outcome')
-            self.results_text.insert(tk.END, choice['outcome'] + "\n", 'outcome')
-
-            if 'requirement' in choice:
-                self.results_text.insert(tk.END, f"      ⚠ Requires: {choice['requirement']}\n", 'requirement')
-
-            self.results_text.insert(tk.END, "\n")
+            self.results_text.insert(tk.END, choice['outcome'] + "\n\n", 'outcome')
 
     def run(self):
         """Start the application."""
