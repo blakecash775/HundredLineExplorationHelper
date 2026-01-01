@@ -66,4 +66,4 @@ The `exploration_events.json` file contains all known exploration events and the
 ## Accuracy
 
 I wasn't able to find an event guide with 100% accuracy, but you can easily update the json if you want.
-Feel free to like file an issue on this repo too if you care that much, maybe we can get the first fully accurate store of this info.
+Feel free to pull request w/ accurate info if you care enough lmao
