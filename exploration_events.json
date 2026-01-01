@@ -1,0 +1,1507 @@
+{
+  "events": [
+    {
+      "prompt": "You find a platform with strange symbols drawn on it. Maybe it's an altar?",
+      "category": "BP",
+      "choices": [
+        {"text": "Examine the altar", "outcome": "+100 BP | -3 HP (any) + 100 BP"},
+        {"text": "Destroy the altar", "outcome": "-3 HP (any) | +60 Minerals"},
+        {"text": "Pray before the altar", "outcome": "+200 BP", "requirement": "Creativity 30"}
+      ]
+    },
+    {
+      "prompt": "You find an old vending machine. There might be some rare products inside",
+      "category": "BP",
+      "choices": [
+        {"text": "Check dispensing tray", "outcome": "Nothing | +2 HP (any)"},
+        {"text": "Check the return slot", "outcome": "+100 BP"},
+        {"text": "Check underneath the machine", "outcome": "+100 BP"}
+      ]
+    },
+    {
+      "prompt": "You see a mummy on the roadside. What in the world is this doing here?",
+      "category": "BP",
+      "choices": [
+        {"text": "Take its accessories", "outcome": "+100 BP"},
+        {"text": "Give it a proper burial", "outcome": "+200 BP | -2 HP (all)"}
+      ]
+    },
+    {
+      "prompt": "You see a bird flying overhead with something shiny in its beak. It might be something valuable",
+      "category": "BP",
+      "choices": [
+        {"text": "Chase after the bird", "outcome": "Move +1 | Move +1 + 100 BP"},
+        {"text": "Throw stone at it", "outcome": "+100 BP | Battle"},
+        {"text": "Get Kako to shoot it down", "outcome": "+200 BP"}
+      ]
+    },
+    {
+      "prompt": "You find a large jar. There's only one thing to do at a time like this!",
+      "category": "BP",
+      "choices": [
+        {"text": "Destroy it", "outcome": "-3 HP (any) | +100 BP"},
+        {"text": "Tip it over", "outcome": "+20% Cloth Buff | Nothing"}
+      ]
+    },
+    {
+      "prompt": "You find a pleasant-looking old playground. This might be a good place to take a break",
+      "category": "BP",
+      "choices": [
+        {"text": "Play on the swings", "outcome": "+20% BP Buff | -20% BP Debuff"},
+        {"text": "Play in the sandbox", "outcome": "+100 BP | Nothing"}
+      ]
+    },
+    {
+      "prompt": "You find a small pond. The water is cloudy and you can't see the bottom",
+      "category": "BP",
+      "choices": [
+        {"text": "Fish it out with a net", "outcome": "Nothing | +100 BP"},
+        {"text": "Wade into the water", "outcome": "+100 BP | Reroll Map"}
+      ]
+    },
+    {
+      "prompt": "You find a pitch-black room while exploring the ruins. It's so dark it's hard to see",
+      "category": "BP",
+      "choices": [
+        {"text": "Look for a light switch", "outcome": "+100 BP | -3 HP (any)"},
+        {"text": "Pull the curtains open", "outcome": "+100 BP | Battle"}
+      ]
+    },
+    {
+      "prompt": "You were suddenly caught in a violent squall. It's going to be hard to move forward in this",
+      "category": "BP",
+      "choices": [
+        {"text": "Take shelter", "outcome": "+200 BP | -2 HP (all) + 200 BP"},
+        {"text": "Press on anyway", "outcome": "+300 BP | -4 HP (all)"},
+        {"text": "Squint your eyes", "outcome": "+300 BP", "requirement": "Observation 30"}
+      ]
+    },
+    {
+      "prompt": "You find a ragged-looking bridge. It might make a good shortcut",
+      "category": "BP",
+      "choices": [
+        {"text": "Run across", "outcome": "Move +3 | -3 HP (all) + 100 BP"},
+        {"text": "Find another way", "outcome": "Move +3"},
+        {"text": "Send Ima across", "outcome": "+200 BP"}
+      ]
+    },
+    {
+      "prompt": "You find a wallet dropped on the roadside. There's a building up ahead that looks like a police station",
+      "category": "BP",
+      "choices": [
+        {"text": "Turn in the wallet", "outcome": "+30% Minerals Buff"},
+        {"text": "Borrow it for a while", "outcome": "-30% All Materials Debuff + 200 BP"}
+      ]
+    },
+    {
+      "prompt": "You see a stone statue on the roadside. It has an odd, almost spiritual air about it",
+      "category": "BP",
+      "choices": [
+        {"text": "Offer a prayer", "outcome": "-5 HP + 200 BP | Nothing"},
+        {"text": "Leave an offering", "outcome": "Lose 1 Item | +200 BP"},
+        {"text": "Destroy the statue", "outcome": "+200 BP", "requirement": "Mobility 15"}
+      ]
+    },
+    {
+      "prompt": "You see a bear covered in blood staggering through a field. Looks like it doesn't have long to live",
+      "category": "BP",
+      "choices": [
+        {"text": "Finish it off", "outcome": "-5 HP (any) + 200 BP | +200 BP"},
+        {"text": "Leave it alone", "outcome": "Battle | Nothing"},
+        {"text": "Get Nozomi to heal it", "outcome": "+300 BP"}
+      ]
+    },
+    {
+      "prompt": "You see a large barrel. What could this be doing here?",
+      "category": "BP",
+      "choices": [
+        {"text": "Break it", "outcome": "Battle | +3 HP (all)"},
+        {"text": "Push it over", "outcome": "-3 HP (all) | +200 BP"}
+      ]
+    },
+    {
+      "prompt": "You see a red light floating up ahead. Could it be...a ghost?",
+      "category": "BP",
+      "choices": [
+        {"text": "Follow it", "outcome": "+200 BP | Nothing"},
+        {"text": "Run after it", "outcome": "+300 BP | -4 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You find a river with a broken bridge. It's a long way, but you might be able to jump to the other side",
+      "category": "BP",
+      "choices": [
+        {"text": "Pluck up your courage and jump", "outcome": "-3 HP + 100 BP"},
+        {"text": "Swim across instead", "outcome": "+100 BP | Nothing"}
+      ]
+    },
+    {
+      "prompt": "Oh no! You dropped your bag. Everything fell into a nearby pond",
+      "category": "BP",
+      "choices": [
+        {"text": "Wade into the water", "outcome": "+300 BP | -5 HP (any)"},
+        {"text": "Just let it go", "outcome": "Lose 1 Item"}
+      ]
+    },
+    {
+      "prompt": "You find an old slot machine. It will give a prize if you line up three of the same pictures in a row",
+      "category": "BP",
+      "choices": [
+        {"text": "Line up cherries", "outcome": "+300 BP"},
+        {"text": "Line up hearts", "outcome": "Nothing"},
+        {"text": "Line up gloves", "outcome": "Nothing | +100% Plants Buff"}
+      ]
+    },
+    {
+      "prompt": "You reach a fork in the road. Which path will you take?",
+      "category": "BP",
+      "choices": [
+        {"text": "Go left", "outcome": "Battle + 300 BP"},
+        {"text": "Go right", "outcome": "+1 HP (all)"}
+      ]
+    },
+    {
+      "prompt": "You find a sword embedded in a stone. It looks hard to pull out",
+      "category": "BP",
+      "choices": [
+        {"text": "Pull out the sword!", "outcome": "-10 HP (any) + 300 BP"},
+        {"text": "Walk away right now", "outcome": "Nothing"}
+      ]
+    },
+    {
+      "prompt": "A stone stele has been erected on the roadside. Strange letters are carved into its surface",
+      "category": "BP",
+      "choices": [
+        {"text": "Try to decipher the letters", "outcome": "Nothing | Card +3"},
+        {"text": "Destroy the stele", "outcome": "-5 HP (any) + 300 BP"},
+        {"text": "Offer a prayer", "outcome": "+300 BP", "requirement": "Creativity 15"}
+      ]
+    },
+    {
+      "prompt": "You find an abandoned batting cage. Takemaru wants to hit some home runs with his Class Weapon",
+      "category": "BP",
+      "choices": [
+        {"text": "Full strength right away", "outcome": "Varies"},
+        {"text": "Short, simple swings", "outcome": "Varies"},
+        {"text": "Use batter's eye for an easy ball", "outcome": "+300 BP", "requirement": "Mobility 30"}
+      ]
+    },
+    {
+      "prompt": "You catch an invader that's been isolated from its squad. What now?",
+      "category": "BP",
+      "choices": [
+        {"text": "Finish it off", "outcome": "+100 BP"},
+        {"text": "Let the poor thing go", "outcome": "Battle"},
+        {"text": "Let Yugamu torture it", "outcome": "+300 BP"}
+      ]
+    },
+    {
+      "prompt": "You find a boxing machine at an old arcade. It gives out prizes depending on the force of your punch",
+      "category": "BP",
+      "choices": [
+        {"text": "Punch with all your might", "outcome": "+200 BP"},
+        {"text": "Attack it with your Class Weapon", "outcome": "+300 BP"},
+        {"text": "Get Moko to punch it", "outcome": "+300 BP"}
+      ]
+    },
+    {
+      "prompt": "You see something shiny under a pile of rubble. You can't tell what it is from here",
+      "category": "BP",
+      "choices": [
+        {"text": "Push the rubble away", "outcome": "Reroll + 100 BP | -2 HP (all) + 100 BP"},
+        {"text": "Reach through a gap", "outcome": "+100 BP"},
+        {"text": "Use Shouma's Class Weapon", "outcome": "+100 BP"}
+      ]
+    },
+    {
+      "prompt": "You find a dark passageway while exploring a cave. It's going to be hard to go any further",
+      "category": "BP",
+      "choices": [
+        {"text": "Light a torch on the wall", "outcome": "+100 BP"},
+        {"text": "Grope around in the dark", "outcome": "Battle"}
+      ]
+    },
+    {
+      "prompt": "You find an abandoned video game arcade. You can win prizes by getting a high score",
+      "category": "BP",
+      "choices": [
+        {"text": "Colorful block-dropping puzzle game", "outcome": "Varies"},
+        {"text": "Action game about monsters killing humans", "outcome": "Varies"},
+        {"text": "Shooter about protecting humans from aliens", "outcome": "+200 BP"}
+      ]
+    },
+    {
+      "prompt": "You find an area with a strange, medicinal odor. Herbs and grasses with healing properties seem to thrive here",
+      "category": "Plants",
+      "choices": [
+        {"text": "Pick green herbs", "outcome": "+30 Plants | -3 HP (any) + 30 Plants"},
+        {"text": "Pick purple herbs", "outcome": "+60 Plants | -3 HP (any)"},
+        {"text": "Search for the best herbs", "outcome": "+60 Plants", "requirement": "Observation 15"}
+      ]
+    },
+    {
+      "prompt": "You trip and get entangled in vines. A huge carnivorous plant bears down on you!",
+      "category": "Plants",
+      "choices": [
+        {"text": "Fight back", "outcome": "-5 HP (any) + 60 Plants | +60 Plants"},
+        {"text": "Give it something else to eat", "outcome": "Lose 1 Item + 60 Plants | -5 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You find plants growing outside an empty house. Some of them might be useful",
+      "category": "Plants",
+      "choices": [
+        {"text": "Pick the pretty pink flowers", "outcome": "+30 Plants | Nothing"},
+        {"text": "Take a large pumpkin", "outcome": "-3 HP (any) | +60 Plants"}
+      ]
+    },
+    {
+      "prompt": "You see some pretty butterflies fluttering around. Their wing patterns are quite unusual",
+      "category": "Plants",
+      "choices": [
+        {"text": "Catch one", "outcome": "Nothing | +50% Plants Buff"},
+        {"text": "Chase after them", "outcome": "+60 Plants | Battle"}
+      ]
+    },
+    {
+      "prompt": "As you climb a sloped path, a log starts rolling down it! It's going to hit you if you don't do something!",
+      "category": "Plants",
+      "choices": [
+        {"text": "Jump out of the way", "outcome": "-5 HP (any) | +90 Plants"},
+        {"text": "Try to outrun it", "outcome": "+60 Plants | Move +3"}
+      ]
+    },
+    {
+      "prompt": "A large, foul-smelling flower blocks your path. Maybe it's a rare material?",
+      "category": "Plants",
+      "choices": [
+        {"text": "Pluck some leaves", "outcome": "-5 HP (any) + 60 Plants | +60 Plants"},
+        {"text": "Take the whole flower", "outcome": "-3 HP (all) + 90 Plants | +90 Plants"},
+        {"text": "Skillfully pick the flower", "outcome": "+90 Plants", "requirement": "Technology 30"}
+      ]
+    },
+    {
+      "prompt": "Various mushrooms are growing on a fallen tree. Some of them might be useful",
+      "category": "Plants",
+      "choices": [
+        {"text": "Pick the poisonous-looking purple ones", "outcome": "+30 Plants | -2 HP (all) + 30 Plants"},
+        {"text": "Pick the fiery-looking red ones", "outcome": "Nothing | -3 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You see a deer eating tree bark. It turns and fixes its big, brown eyes on you",
+      "category": "Plants",
+      "choices": [
+        {"text": "Approach it", "outcome": "+30 Plants | -3 HP (any)"},
+        {"text": "Offer it some food", "outcome": "+30 Plants | Lose 1 Item"}
+      ]
+    },
+    {
+      "prompt": "You find a large turnip in the ground. You might be able to use it for something if you dig it out",
+      "category": "Plants",
+      "choices": [
+        {"text": "Just pluck some leaves", "outcome": "+30 Plants"},
+        {"text": "Pull on it", "outcome": "+60 Plants | -3 HP (any)"},
+        {"text": "Yank it right out!", "outcome": "+60 Plants", "requirement": "Endurance 30"}
+      ]
+    },
+    {
+      "prompt": "You arrive in a pretty flower field. You decide to pick a nice flower before leaving",
+      "category": "Plants",
+      "choices": [
+        {"text": "Pick a crimson rose", "outcome": "-3 HP (any) + 60 Plants"},
+        {"text": "Pick a sweet lavender flower", "outcome": "+60 Plants | Reroll"},
+        {"text": "Pick the unfamiliar flower", "outcome": "+90 Plants", "requirement": "Investigation 30"}
+      ]
+    },
+    {
+      "prompt": "You find a sharp, sturdy axe. You can probably use it to cut down some of the nearby trees",
+      "category": "Plants",
+      "choices": [
+        {"text": "Swing the axe with all your might", "outcome": "+60 Plants | -5 HP (any)"},
+        {"text": "Harvest wood slowly and carefully", "outcome": "-3 HP (any) + 60 Plants | -3 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You find a dilapidated old greenhouse. Lots of pumpkins are growing inside",
+      "category": "Plants",
+      "choices": [
+        {"text": "Take a large pumpkin", "outcome": "+60 Plants | -5 HP (any) + 60 Plants"},
+        {"text": "Take a small pumpkin", "outcome": "+90 Plants | -3 HP (all)"}
+      ]
+    },
+    {
+      "prompt": "Strange seeds are falling from the sky",
+      "category": "Plants",
+      "choices": [
+        {"text": "Jump and try to catch them", "outcome": "+30 Plants | -3 HP (any) + 30 Plants"},
+        {"text": "Pick them up after they hit the ground", "outcome": "+30 Plants"}
+      ]
+    },
+    {
+      "prompt": "You find an old cabin made of scrap and driftwood. Some of it might be useful as crafting materials",
+      "category": "Plants",
+      "choices": [
+        {"text": "Take pieces from the outside", "outcome": "+30 Plants"},
+        {"text": "Take pieces from the inside", "outcome": "+20% Plants Buff | Battle"}
+      ]
+    },
+    {
+      "prompt": "You find some small flowers. They may be useful as a raw material",
+      "category": "Plants",
+      "choices": [
+        {"text": "Pick some", "outcome": "+30 Plants"},
+        {"text": "Ignore them", "outcome": "Battle + 30 Plants | Battle"}
+      ]
+    },
+    {
+      "prompt": "You find lots of clovers growing on the ground. Maybe you can find a lucky four-leaf one",
+      "category": "Plants",
+      "choices": [
+        {"text": "Pick regular clovers", "outcome": "+30 Plants | Lose 1 Item + 30 Plants"},
+        {"text": "Look for a four-leaf clover", "outcome": "+60 Plants | -1 HP (all) + 30 Plants"}
+      ]
+    },
+    {
+      "prompt": "Your path is blocked by thick clumps of bamboo grass",
+      "category": "Plants",
+      "choices": [
+        {"text": "Cut the grass before proceeding", "outcome": "-2 HP (any) + 30 Plants | +30 Plants"},
+        {"text": "Force your way through", "outcome": "+30 Plants | -3 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You find a grove where different fruit trees are growing. Will you try some?",
+      "category": "Plants",
+      "choices": [
+        {"text": "Eat the red fruits", "outcome": "Cards +2 | Card -2 | +20% All Materials Buff"},
+        {"text": "Eat the blue fruits", "outcome": "+60 Plants | -4 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You found an overrun greenhouse that looks like a miniature jungle. You might find something good inside",
+      "category": "Plants",
+      "choices": [
+        {"text": "Pull away the vines and look inside", "outcome": "+90 Plants | -3 HP (all)"},
+        {"text": "Ignore it and move on", "outcome": "Nothing | Battle"}
+      ]
+    },
+    {
+      "prompt": "You find a tree with strange black fruits growing on it. You've never seen fruit like this before",
+      "category": "Plants",
+      "choices": [
+        {"text": "Pick some of the fruits", "outcome": "-5 HP (any) | +90 Plants"},
+        {"text": "Eat some of the fruits", "outcome": "+30% All Materials Buff | -30% All Materials Debuff"}
+      ]
+    },
+    {
+      "prompt": "You find a beehive. Maybe you can get some honey out of it",
+      "category": "Plants",
+      "choices": [
+        {"text": "Take some carefully", "outcome": "Move +5 | +90 Plants"},
+        {"text": "Throw a stone at it", "outcome": "-5 HP (any) + 90 Plants | +90 Plants"}
+      ]
+    },
+    {
+      "prompt": "You find an area with some unusual-looking plants. Which will you pick?",
+      "category": "Plants",
+      "choices": [
+        {"text": "The flower with spotted buds", "outcome": "+60 Plants | -3 HP (any)"},
+        {"text": "The plant with face-like roots", "outcome": "+60 Plants | -3 HP (all) + 60 Plants"}
+      ]
+    },
+    {
+      "prompt": "You find a forest where bamboo and mushrooms grow in profusion. Which one will you pick?",
+      "category": "Plants",
+      "choices": [
+        {"text": "Pick the bamboo shoots", "outcome": "+90 Plants | -3 HP (all) + Move +5"},
+        {"text": "Pick the mushrooms", "outcome": "+90 Plants | -3 HP (all) + Move +5"},
+        {"text": "Ignore both and move on", "outcome": "Nothing | Battle"}
+      ]
+    },
+    {
+      "prompt": "Insects are swarming around one particular tree. What are they so interested in?",
+      "category": "Plants",
+      "choices": [
+        {"text": "Examine the tree", "outcome": "-3 HP (any) + 30 Plants"},
+        {"text": "Examine the insects", "outcome": "-2 HP (any) | Nothing"}
+      ]
+    },
+    {
+      "prompt": "Kyoshika's gone missing. The Holy Jumonji Sword is still here, though. What could have happened to her?",
+      "category": "Plants",
+      "choices": [
+        {"text": "Go look for her", "outcome": "+60 Plants | -5 HP (any)"},
+        {"text": "Wait for her to come back", "outcome": "Battle | +90 Plants"}
+      ]
+    },
+    {
+      "prompt": "You find an abandoned research lab. There's plenty of bottled chemicals still inside. Nozomi can probably mix them into usable medicine",
+      "category": "Plants",
+      "choices": [
+        {"text": "Use yellow chemical as a base", "outcome": "+3 HP (all) | -3 HP (all)"},
+        {"text": "Use green chemical as a base", "outcome": "-3 HP (all) | +100% Plants Buff"},
+        {"text": "Mix all the chemicals together", "outcome": "-5 HP (all) | +10 HP (all)"}
+      ]
+    },
+    {
+      "prompt": "Eva wants you to give her additional orders. She says this will help her be more efficient. What will you tell her?",
+      "category": "Plants",
+      "choices": [
+        {"text": "Prioritize collecting rare materials", "outcome": "+90 Plants | Battle"},
+        {"text": "Focus on killing invaders", "outcome": "+60 Plants | Battle"}
+      ]
+    },
+    {
+      "prompt": "You start sinking into the ground while exploring marshland. You've been caught in quicksand!",
+      "category": "Plants",
+      "choices": [
+        {"text": "Throw away your stuff to lighten the load", "outcome": "Lose 1 Item"},
+        {"text": "Wriggle and squirm your way out", "outcome": "+30 Plants"}
+      ]
+    },
+    {
+      "prompt": "Hiruko disappeared while you're taking a break. She can probably handle herself, but.. Will you go look for her anyway?",
+      "category": "Plants",
+      "choices": [
+        {"text": "Look for Hiruko", "outcome": "+90 Plants | Battle"},
+        {"text": "Leave her be", "outcome": "+60 Plants | Nothing"}
+      ]
+    },
+    {
+      "prompt": "You see something glimmering at the top of a tall tree. Is there any way to retrieve it?",
+      "category": "Plants",
+      "choices": [
+        {"text": "Climb the tree", "outcome": "-5 HP (any)"},
+        {"text": "Shake the tree", "outcome": "-3 HP (all) | +60 Plants"},
+        {"text": "Get Hiruko to cut it down", "outcome": "+60 Plants"}
+      ]
+    },
+    {
+      "prompt": "You see a bird roosting on top of a tall tree. Its feathers are a beautiful crimson color",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Throw stone at bird", "outcome": "-5 HP (any) | +60 Cloth"},
+        {"text": "Climb tree", "outcome": "-5 HP (any) | +90 Cloth"},
+        {"text": "Chase down bird", "outcome": "+90 Cloth", "requirement": "Exploration 30"}
+      ]
+    },
+    {
+      "prompt": "You find a herd of goat-like animals. Their fur looks soft and fluffy",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Run toward herd and attack", "outcome": "-3 HP (all) + 90 Cloth"},
+        {"text": "Approach slowly", "outcome": "-5 HP (any) | +90 Cloth"}
+      ]
+    },
+    {
+      "prompt": "You find a cowboy-looking invader wearing a ten-gallon hat",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Strike before reaction", "outcome": "Battle + 60 Cloth | Battle"},
+        {"text": "Sneak past", "outcome": "Move +5 | Nothing"}
+      ]
+    },
+    {
+      "prompt": "You find a suitcase on the ground. It's locked",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Force open", "outcome": "-5 HP (any) + 90 Cloth | +90 Cloth"},
+        {"text": "Try random combination", "outcome": "-3 HP (all) | +90 Cloth"}
+      ]
+    },
+    {
+      "prompt": "You found a large piece of red cloth while exploring old houses",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Magic carpet", "outcome": "-5 HP (all) | Card +3 + 90 Cloth"},
+        {"text": "Superhero cape", "outcome": "Battle + 60 Cloth | +50% BP Buff + 60 Cloth"},
+        {"text": "Pirate king's flag", "outcome": "+60 Cloth | Nothing"}
+      ]
+    },
+    {
+      "prompt": "You find a tiger sleeping soundly",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Leave alone", "outcome": "+60 Cloth | Card -2"},
+        {"text": "Attack it", "outcome": "-6 HP (any) | +90 Cloth"}
+      ]
+    },
+    {
+      "prompt": "You see several mannequins in a display window",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Take sporty clothing", "outcome": "+50% Minerals Buff + 30 Cloth | -3 HP (any) + 30 Cloth"},
+        {"text": "Take swanky suit", "outcome": "+50% Machines Buff + 30 Cloth | -3 HP (any) + 30 Cloth"},
+        {"text": "Take lacy outfit", "outcome": "-3 HP (any) + 60 Cloth | +50% Plants Buff + 60 Cloth"}
+      ]
+    },
+    {
+      "prompt": "You find a plushie abandoned on the roadside. It looks like an invader",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Pick it up", "outcome": "Battle + 30 Minerals | Lose 1 Item + 60 Cloth | +60 Cloth"},
+        {"text": "Attack it", "outcome": "+30 Cloth | -10% All Materials Debuff + 30 Cloth"}
+      ]
+    },
+    {
+      "prompt": "You find some graffiti sprayed on a wall",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Inspect wall", "outcome": "+90 Cloth | -5 HP (any)"},
+        {"text": "Destroy wall", "outcome": "-5 HP (any) + 30 Minerals"},
+        {"text": "Figure out secret code", "outcome": "+90 Minerals", "requirement": "Literacy 30"}
+      ]
+    },
+    {
+      "prompt": "You are suddenly unable to move. You've been caught in a huge spiderweb!",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Force through", "outcome": "Lose 2 Items + 90 Cloth | +90 Cloth"},
+        {"text": "Slip out of clothes", "outcome": "+90 Cloth | -3 HP (any) + 90 Cloth"}
+      ]
+    },
+    {
+      "prompt": "You see a large flag on top of a broadcasting tower",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Climb tower", "outcome": "+90 Cloth | -10 HP (any)"},
+        {"text": "Don't bother", "outcome": "Nothing"},
+        {"text": "Get Ima to do it", "outcome": "+90 Cloth"}
+      ]
+    },
+    {
+      "prompt": "You find a field with fangs and fur scattered around it",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Pick up fur", "outcome": "+60 Cloth | -3 HP (any) + 60 Cloth"},
+        {"text": "Pick up fangs", "outcome": "+60 Cloth | -20% All Materials Debuff"},
+        {"text": "Follow animal tracks", "outcome": "+60 Cloth", "requirement": "Exploration 15"}
+      ]
+    },
+    {
+      "prompt": "An invader in an awesome cape is wandering around",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Steal cape", "outcome": "+60 Cloth | Battle + 60 Cloth"},
+        {"text": "Challenge to duel", "outcome": "+60 Cloth | -3 HP (all)"}
+      ]
+    },
+    {
+      "prompt": "You find a box with a talisman pasted on it",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Peel off talisman", "outcome": "+30 Cloth | Card +1"},
+        {"text": "Break seal and open", "outcome": "+30 Cloth"}
+      ]
+    },
+    {
+      "prompt": "You see a cardboard box moving around by itself!",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Sneak closer and lift", "outcome": "-3 HP (any) + 30 Cloth | +30 Cloth"},
+        {"text": "Dash and kick", "outcome": "+30 Cloth | -2 HP (all)"}
+      ]
+    },
+    {
+      "prompt": "You found a creepy straw effigy in some temple ruins",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Pick it up", "outcome": "+30 Cloth | -10% All Materials Debuff + 30 Cloth"},
+        {"text": "Burn it", "outcome": "Reroll Map"}
+      ]
+    },
+    {
+      "prompt": "You see a sign in the middle of your path with an arrow",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Ignore and move on", "outcome": "-3 HP (any) + 30 Cloth"},
+        {"text": "Go where arrow points", "outcome": "+60 Cloth | -3 HP (any)"},
+        {"text": "Figure out secret code", "outcome": "+60 Cloth", "requirement": "Literacy 15"}
+      ]
+    },
+    {
+      "prompt": "You find a first-aid kit. The box is old but supplies still usable",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Take as materials", "outcome": "+30 Cloth"},
+        {"text": "Use to dress wounds", "outcome": "+3 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You feel a sudden strong gust of wind. Trash is flying toward you!",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Grab trash", "outcome": "+30 Cloth"},
+        {"text": "Dodge trash", "outcome": "-3 HP (any) + 30 Cloth"}
+      ]
+    },
+    {
+      "prompt": "You catch sight of a figure in a black cape cutting across your path",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Ignore and move on", "outcome": "+60 Cloth | Nothing"},
+        {"text": "Chase after figure", "outcome": "Battle + 60 Cloth | +60 Cloth"},
+        {"text": "Could it be Black Tie Mask", "outcome": "-5 HP (any) + 60 Cloth | +60 Cloth"}
+      ]
+    },
+    {
+      "prompt": "You find a pair of men's underwear on the ground",
+      "category": "Cloth",
+      "choices": [
+        {"text": "See if clean", "outcome": "+30 Cloth | Nothing"},
+        {"text": "Smell them", "outcome": "+30 Cloth | -3 HP (any) + 30 Cloth"}
+      ]
+    },
+    {
+      "prompt": "You see a large piece of cloth in the middle of the road",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Look under cloth", "outcome": "+90 Cloth | -3 HP (all)"},
+        {"text": "Ignore it", "outcome": "Battle + 90 Cloth | Nothing"}
+      ]
+    },
+    {
+      "prompt": "A sudden gust blows Kurara's mask away",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Chase after mask", "outcome": "+50% BP Buff"},
+        {"text": "Find substitute", "outcome": "+30 Cloth"}
+      ]
+    },
+    {
+      "prompt": "You find a wrecked ship washed up on the beach",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Explore deck", "outcome": "-3 HP (any) | +60 Cloth"},
+        {"text": "Search cabins", "outcome": "+30 Cloth | Battle"}
+      ]
+    },
+    {
+      "prompt": "You find a claw machine in arcade ruins",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Play game", "outcome": "+60 Cloth | Nothing"},
+        {"text": "Smash glass", "outcome": "+60 Cloth | Battle"}
+      ]
+    },
+    {
+      "prompt": "You see a dog picking through trash",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Examine trash", "outcome": "+30 Cloth"},
+        {"text": "Ignore it", "outcome": "Nothing"}
+      ]
+    },
+    {
+      "prompt": "You see a shadowy figure exploring creepy old mansion. Kyoshika is afraid",
+      "category": "Cloth",
+      "choices": [
+        {"text": "It's an evil spirit", "outcome": "+60 Cloth"},
+        {"text": "It's combat guardian spirit", "outcome": "Battle"}
+      ]
+    },
+    {
+      "prompt": "You find a sandy beach. Gaku runs off about swimsuit-clad babes",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Let him go", "outcome": "+60 Cloth | Battle"},
+        {"text": "Stop him", "outcome": "-2 HP (any) | Nothing"}
+      ]
+    },
+    {
+      "prompt": "You see a bird's nest in a tree",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Climb up and check", "outcome": "-5 HP (any)"},
+        {"text": "Shake nest down", "outcome": "+60 Cloth"}
+      ]
+    },
+    {
+      "prompt": "You find a place swarming with invaders. Hiruko wants to spill guts",
+      "category": "Cloth",
+      "choices": [
+        {"text": "Massacre invaders", "outcome": "+60 Cloth | -3 HP (all)"},
+        {"text": "Pull back", "outcome": "Move +5"}
+      ]
+    },
+    {
+      "prompt": "You see a hole in the road ahead. It's so dark you can't see anything",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Jump in hole", "outcome": "+30 Minerals"},
+        {"text": "Inspect hole", "outcome": "+2 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "The ground starts shaking while exploring abandoned building",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Hide under table", "outcome": "+30 Minerals | -2 HP (all) + 30 Minerals"},
+        {"text": "Run out", "outcome": "-3 HP (any) | +30 Minerals"}
+      ]
+    },
+    {
+      "prompt": "You find a neglected bronze statue of a dog",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Polish it", "outcome": "+60 Minerals | Nothing"},
+        {"text": "Pat head", "outcome": "+30 Minerals | Nothing"},
+        {"text": "Draw on it", "outcome": "+60 Minerals | -2 HP (all) + 30 Minerals"}
+      ]
+    },
+    {
+      "prompt": "Thwp! A pebble hits you. Where did it come from?",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Look around", "outcome": "+30 Minerals | Battle"},
+        {"text": "Ignore and move on", "outcome": "+30 Minerals | -2 HP (all) + 30 Minerals"}
+      ]
+    },
+    {
+      "prompt": "You see a hazard sign in the middle of the road",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Take different path", "outcome": "-1 HP (all) | Nothing"},
+        {"text": "Ignore sign and press on", "outcome": "+30 Minerals | -3 HP (any) + 30 Minerals"}
+      ]
+    },
+    {
+      "prompt": "You see something shining under rubble and needles",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Thrust hand in", "outcome": "-8 HP (any) + 90 Minerals"},
+        {"text": "Avoid pain", "outcome": "Nothing"},
+        {"text": "Let Darumi do it", "outcome": "+90 Minerals"}
+      ]
+    },
+    {
+      "prompt": "You find the ruins of an old park with healthy flowers",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Look at flowers", "outcome": "+30 Minerals"},
+        {"text": "Ignore them", "outcome": "Nothing"}
+      ]
+    },
+    {
+      "prompt": "Water is coming out of the ground here. A natural spring?",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Drink some water", "outcome": "Card +3 | -3 HP (any)"},
+        {"text": "Wash face", "outcome": "-3 HP (any) + 60 Minerals"},
+        {"text": "Dig deeper", "outcome": "+60 Minerals", "requirement": "Endurance 15"}
+      ]
+    },
+    {
+      "prompt": "You find an old jewelry store in the ruins",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Search store", "outcome": "+60 Minerals | -5 HP (any)"},
+        {"text": "Ignore and move on", "outcome": "Nothing | Battle"},
+        {"text": "Gaku's acting weird", "outcome": "+90 Minerals"}
+      ]
+    },
+    {
+      "prompt": "You find an abandoned research lab studying mineral ore",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Grab rocks", "outcome": "-3 HP (any) + 60 Minerals | +60 Minerals"},
+        {"text": "Flip switches", "outcome": "-2 HP (all) | +60 Minerals"},
+        {"text": "Put item in machine", "outcome": "Lose 1 Item + 90 Minerals | Lose 1 Item + -3 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You find a shooting game at abandoned arcade",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Aim for tin toy", "outcome": "+60 Minerals | -3 HP (all)"},
+        {"text": "Aim for heavy gem", "outcome": "-5 HP (any) | +90 Minerals"},
+        {"text": "Aim for candy", "outcome": "+2 HP (any) | Nothing"}
+      ]
+    },
+    {
+      "prompt": "This looks like an old mineral store with rocks on shelves",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Take glowing blue rock", "outcome": "-3 HP (all) | +90 Minerals"},
+        {"text": "Take yellow rock", "outcome": "+60 Minerals | -5 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You see shards of glass on the ground",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Look for intact pieces", "outcome": "-3 HP (any) + 30 Minerals | +30 Minerals"},
+        {"text": "Just grab whatever", "outcome": "-3 HP (any) + 30 Minerals | +30 Minerals"}
+      ]
+    },
+    {
+      "prompt": "You pick up black ore. It smells kind of strange",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Throw it away", "outcome": "Nothing | +30 Minerals"},
+        {"text": "Take it", "outcome": "+60 Minerals | -5 HP (any)"},
+        {"text": "Break it open", "outcome": "+30 Minerals", "requirement": "Analysis 15"}
+      ]
+    },
+    {
+      "prompt": "You see a humongous sandstorm brewing in the distance",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Run away", "outcome": "Move +3"},
+        {"text": "Take shelter", "outcome": "-3 HP (all) + 60 Minerals"}
+      ]
+    },
+    {
+      "prompt": "Gaku finds something glittering in the river. He says it's gold dust",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Trust him and jump in", "outcome": "+90 Minerals"},
+        {"text": "He must be mistaken", "outcome": "Nothing"}
+      ]
+    },
+    {
+      "prompt": "Your path is blocked by a large hole",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Look into hole", "outcome": "-5 HP (any) | Nothing"},
+        {"text": "Put hand in", "outcome": "+60 Minerals | -4 HP (any)"},
+        {"text": "Light inside", "outcome": "+60 Minerals", "requirement": "Investigation 30"}
+      ]
+    },
+    {
+      "prompt": "You find a jewelry box on the roadside. It's locked",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Force open", "outcome": "-3 HP (any) | +90 Minerals"},
+        {"text": "Pick lock", "outcome": "Nothing | +90 Minerals"}
+      ]
+    },
+    {
+      "prompt": "You trip and fall exploring ruins. End up in basement",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Look for stairs", "outcome": "+90 Minerals | -4 HP (any)"},
+        {"text": "Explore basement", "outcome": "-5 HP (any) + 90 Minerals | -3 HP (any)"},
+        {"text": "Make own stairs", "outcome": "+90 Minerals", "requirement": "Analysis 30"}
+      ]
+    },
+    {
+      "prompt": "You find a creepy suit of armor. Did it move?",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Inspect armor", "outcome": "+90 Minerals | Battle"},
+        {"text": "Attack armor", "outcome": "Nothing | -3 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You find a small hole in a cavern wall",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Force through", "outcome": "-4 HP (any) | +90 Minerals"},
+        {"text": "Make hole bigger", "outcome": "Card -5 | +100% Minerals Buff"}
+      ]
+    },
+    {
+      "prompt": "You start sinking into ground exploring desert. Quicksand!",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Throw away stuff", "outcome": "Lose 1 Item"},
+        {"text": "Wriggle out", "outcome": "+60 Minerals"}
+      ]
+    },
+    {
+      "prompt": "You find a discarded minecart while exploring cave",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Hop inside", "outcome": "-3 HP (all) + 90 Minerals | Move +3"},
+        {"text": "Give it push", "outcome": "+90 Minerals | Nothing"}
+      ]
+    },
+    {
+      "prompt": "You find a large stone with sacred rope. It seals something",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Break stone", "outcome": "-10 HP (any) + 90 Minerals"},
+        {"text": "Leave offering", "outcome": "-3 HP (all) + 30 Minerals"},
+        {"text": "Get Kyoshika to slash", "outcome": "+90 Minerals"}
+      ]
+    },
+    {
+      "prompt": "You find a disused mine with dynamite and pickaxes",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Use pickaxe", "outcome": "+60 Minerals | Nothing"},
+        {"text": "Use dynamite", "outcome": "-5 HP (all) | +90 Minerals"},
+        {"text": "Get Kurara to dig", "outcome": "+90 Minerals"}
+      ]
+    },
+    {
+      "prompt": "A medium-sized invader blocks way. Moko wants 1-on-1",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Let her", "outcome": "-5 HP (any) + 90 Minerals"},
+        {"text": "Back her up", "outcome": "+90 Minerals + Battle"},
+        {"text": "Stop her", "outcome": "Move +5 | Battle + 90 Minerals"}
+      ]
+    },
+    {
+      "prompt": "As you climb, a boulder starts rolling down",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Look for way out", "outcome": "Varies"},
+        {"text": "Head back down", "outcome": "Varies"},
+        {"text": "Get Moko to destroy", "outcome": "+30 Minerals"}
+      ]
+    },
+    {
+      "prompt": "You find a large excavator. Tsubasa can use it",
+      "category": "Minerals",
+      "choices": [
+        {"text": "Get Tsubasa to operate", "outcome": "+90 Minerals | Battle + 90 Minerals"},
+        {"text": "Stay safe", "outcome": "Nothing"}
+      ]
+    },
+    {
+      "prompt": "You find a toy store in ruins with products on shelves",
+      "category": "Machines",
+      "choices": [
+        {"text": "Dismantle car radio", "outcome": "+90 Machines | -5 HP (any)"},
+        {"text": "Dismantle miniature robot", "outcome": "-5 HP (any) + 60 Machines | +60 Machines"}
+      ]
+    },
+    {
+      "prompt": "You find ruins of old home appliance store",
+      "category": "Machines",
+      "choices": [
+        {"text": "Use washing machine", "outcome": "Reroll Map"},
+        {"text": "Open refrigerator", "outcome": "Battle | +2 HP (all)"},
+        {"text": "Turn on TV", "outcome": "-3 HP (all) + 30 Machines | +60 Machines"}
+      ]
+    },
+    {
+      "prompt": "You find an unexploded bomb under rubble",
+      "category": "Machines",
+      "choices": [
+        {"text": "Dismantle bomb", "outcome": "+60 Machines + -3 HP (any) | +60 Machines"},
+        {"text": "Get away", "outcome": "Move +3"}
+      ]
+    },
+    {
+      "prompt": "You've activated a time bomb!",
+      "category": "Machines",
+      "choices": [
+        {"text": "Try defuse", "outcome": "-2 HP (any) + 30 Machines | +60 Machines"},
+        {"text": "Run fast", "outcome": "Move +1 + 30 Machines | -1 HP (all) + 30 Machines"},
+        {"text": "Get Tsubasa to defuse", "outcome": "+60 Machines | -2 HP (all) + 30 Machines"}
+      ]
+    },
+    {
+      "prompt": "You find an old recycling machine",
+      "category": "Machines",
+      "choices": [
+        {"text": "Put materials in", "outcome": "Lose 1 Item + 60 Machines | Lose 1 Item + 30 Machines"},
+        {"text": "Kick it", "outcome": "+60 Machines | Battle + 30 Machines"}
+      ]
+    },
+    {
+      "prompt": "You find what seems to be an old factory. Machines are broken",
+      "category": "Machines",
+      "choices": [
+        {"text": "Investigate", "outcome": "-5 HP (any) + 60 Machines"},
+        {"text": "Dismantle", "outcome": "Damage | +60 Machines"},
+        {"text": "Put together", "outcome": "+60 Machines", "requirement": "Calculation 15"}
+      ]
+    },
+    {
+      "prompt": "You see a small drone flying around. Coming right for you!",
+      "category": "Machines",
+      "choices": [
+        {"text": "Jump and grab", "outcome": "+60 Machines | +60 Machines + -5 HP (any)"},
+        {"text": "Run away", "outcome": "+60 Machines | -5 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You find ruins of a clock store stocked with clocks",
+      "category": "Machines",
+      "choices": [
+        {"text": "Dismantle small", "outcome": "+30 Machines | Nothing"},
+        {"text": "Dismantle large", "outcome": "+60 Machines | Battle + 100 BP"}
+      ]
+    },
+    {
+      "prompt": "You hear singing in the distance. It sounds beautiful",
+      "category": "Machines",
+      "choices": [
+        {"text": "Follow singing", "outcome": "+60 Machines"},
+        {"text": "Ignore and move on", "outcome": "-5 HP (any)"},
+        {"text": "Play school song", "outcome": "+90 Machines", "requirement": "Mobility 30"}
+      ]
+    },
+    {
+      "prompt": "You find an old security robot. It doesn't look like moving",
+      "category": "Machines",
+      "choices": [
+        {"text": "Dismantle it", "outcome": "-5 HP (any) + 60 Machines | +60 Machines"},
+        {"text": "Repair it", "outcome": "-5 HP (any) | +60 Machines"}
+      ]
+    },
+    {
+      "prompt": "You find a crumbling building with machine parts",
+      "category": "Machines",
+      "choices": [
+        {"text": "Search building", "outcome": "+60 Machines | -5 HP (any) + 60 Machines"},
+        {"text": "Stay safe", "outcome": "Nothing | -5 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You see an old grand piano. Strange noise coming from it",
+      "category": "Machines",
+      "choices": [
+        {"text": "Look inside", "outcome": "+30 Machines"},
+        {"text": "Look underneath", "outcome": "-10% All Materials Debuff | Battle + 30 Machines"}
+      ]
+    },
+    {
+      "prompt": "You find an abandoned car",
+      "category": "Machines",
+      "choices": [
+        {"text": "Check driver's seat", "outcome": "+30 Machines | -2 HP (all) + 30 Machines"},
+        {"text": "Check trunk", "outcome": "Battle + 30 Machines | +30 Machines"},
+        {"text": "Get Tsubasa to repair", "outcome": "Move +5 + 30 Machines"}
+      ]
+    },
+    {
+      "prompt": "You find lots of abandoned home appliances",
+      "category": "Machines",
+      "choices": [
+        {"text": "Dismantle washing machine", "outcome": "+30 Machines | -2 HP (all)"},
+        {"text": "Dismantle refrigerator", "outcome": "+60 Machines | -2 HP (all)"},
+        {"text": "Dismantle computer", "outcome": "+60 Machines", "requirement": "Technology 30"}
+      ]
+    },
+    {
+      "prompt": "You find a lab with lots of books on shelves",
+      "category": "Machines",
+      "choices": [
+        {"text": "White cover", "outcome": "-4 HP (any) | +60 Machines"},
+        {"text": "Black cover", "outcome": "-4 HP (all) | +30% All Materials Buff"},
+        {"text": "Move bookcase", "outcome": "+90 Machines", "requirement": "Calculation 30"}
+      ]
+    },
+    {
+      "prompt": "A runaway dump truck hurtles toward you",
+      "category": "Machines",
+      "choices": [
+        {"text": "Jump out of way", "outcome": "-10 HP (any) + 90 Machines"},
+        {"text": "Take impact head-on", "outcome": "+90 Machines | -10 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You find a loose cable still live. Smoking, might catch fire",
+      "category": "Machines",
+      "choices": [
+        {"text": "Pull cable out", "outcome": "+30 Machines | -3 HP (any) + 30 Machines"},
+        {"text": "Look for circuit breaker", "outcome": "+30 Machines | -2 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You find a discarded bicycle by the roadside",
+      "category": "Machines",
+      "choices": [
+        {"text": "Hop on", "outcome": "Card +1 | -3 HP (any) + 30 Machines"},
+        {"text": "Take apart", "outcome": "+30 Machines | Nothing"}
+      ]
+    },
+    {
+      "prompt": "You find a remote control on the ground",
+      "category": "Machines",
+      "choices": [
+        {"text": "Shake it", "outcome": "-3 HP (any) + 30 Machines | +30 Machines"},
+        {"text": "Press button", "outcome": "+30 Machines | -2 HP (all)"}
+      ]
+    },
+    {
+      "prompt": "You find remains of a giant robot",
+      "category": "Machines",
+      "choices": [
+        {"text": "Check cockpit", "outcome": "+100% Machines Buff | Move +5"},
+        {"text": "Check power reactor", "outcome": "-10 HP (all) | +90 Machines"}
+      ]
+    },
+    {
+      "prompt": "You find an old cassette player on the ground",
+      "category": "Machines",
+      "choices": [
+        {"text": "Play tape", "outcome": "+1 HP (any) + 30 Machines | +30 Machines"},
+        {"text": "Ignore and move on", "outcome": "Nothing | Battle"}
+      ]
+    },
+    {
+      "prompt": "You find ruins of an invader base with lots of invaders",
+      "category": "Machines",
+      "choices": [
+        {"text": "Keep hidden and creep", "outcome": "+90 Machines | Battle"},
+        {"text": "Charge right in", "outcome": "+90 Machines | -3 HP (all)"}
+      ]
+    },
+    {
+      "prompt": "You see a small drone stuck up a tree",
+      "category": "Machines",
+      "choices": [
+        {"text": "Climb up", "outcome": "+30 Machines"},
+        {"text": "Throw stone", "outcome": "+30 Machines | -3 HP (any) + 30 Machines"}
+      ]
+    },
+    {
+      "prompt": "You find ruins of invader base. Security camera at entrance",
+      "category": "Machines",
+      "choices": [
+        {"text": "Creep past", "outcome": "+90 Machines | Battle"},
+        {"text": "Turn back", "outcome": "Nothing"},
+        {"text": "Get Kako to destroy", "outcome": "+90 Machines"}
+      ]
+    },
+    {
+      "prompt": "You find an armory. Kurara wants to dismantle weapons",
+      "category": "Machines",
+      "choices": [
+        {"text": "Dismantle rocket", "outcome": "+60 Machines"},
+        {"text": "Dismantle armored car", "outcome": "+30 Machines"},
+        {"text": "Dismantle homing missile", "outcome": "+90 Machines | -5 HP (all)"}
+      ]
+    },
+    {
+      "prompt": "You see an unidentified flying object. Kako says black triangle",
+      "category": "Machines",
+      "choices": [
+        {"text": "Focus telepathic message", "outcome": "+90 Machines | -5 HP (all)"},
+        {"text": "Offer sacrifice", "outcome": "Lose 1 Item + 90 Machines"},
+        {"text": "Chant spell", "outcome": "Battle | +90 Machines"}
+      ]
+    },
+    {
+      "prompt": "You find vacant enemy base. Eva has vague recollection",
+      "category": "Machines",
+      "choices": [
+        {"text": "Ask for valuable materials", "outcome": "+90 Machines | Battle"},
+        {"text": "Ask to remove dangers", "outcome": "+60 Machines | -3 HP (all)"}
+      ]
+    },
+    {
+      "prompt": "You are surrounded by a thick fog. You can barely see what's in front of you anymore",
+      "category": "Random",
+      "choices": [
+        {"text": "Hide and wait for it to pass", "outcome": "Card -5 | +2 HP (all)"},
+        {"text": "Keep going anyway", "outcome": "+50% Plants Buff | -5 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You find a vacant bookstore. You can't read this language, but Eito should be able to decipher it. Which book will you show him?",
+      "category": "Random",
+      "choices": [
+        {"text": "Travel magazine", "outcome": "Card +2"},
+        {"text": "Mineral encyclopedia", "outcome": "+50% Minerals Buff"},
+        {"text": "Comic anthology", "outcome": "+3 HP (all) + Reroll"}
+      ]
+    },
+    {
+      "prompt": "You find a natural hot spring",
+      "category": "Random",
+      "choices": [
+        {"text": "Take a dip", "outcome": "+2 HP (all) + Lose 2 Items | +2 HP (all)"},
+        {"text": "We don't have time to rest", "outcome": "Nothing"}
+      ]
+    },
+    {
+      "prompt": "You find an abandoned factory. There's lots of junk lying around. What will you ask Tsubasa to fix?",
+      "category": "Random",
+      "choices": [
+        {"text": "Vacuum cleaner-like machine", "outcome": "+50% Machines Buff | -3 HP (all)"},
+        {"text": "Chair-like appliance", "outcome": "+2 HP (any)"},
+        {"text": "Wheelbarrow-like machine", "outcome": "-3 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You find what looks like a pine mushroom. It just so happens you're feeling hungry. Is it okay to eat this?",
+      "category": "Random",
+      "choices": [
+        {"text": "Fry and eat it", "outcome": "-3 HP (all) | +3 HP (all)"},
+        {"text": "Don't eat it", "outcome": "Nothing"},
+        {"text": "Ask Eito about it", "outcome": "+60 Plants | +3 HP (all)"}
+      ]
+    },
+    {
+      "prompt": "You pick up a mask with an exotic design. You feel a strange force acting on you. It's urging you to put the mask on",
+      "category": "Random",
+      "choices": [
+        {"text": "Put it on", "outcome": "Card -1 | Move +3"},
+        {"text": "Throw it away", "outcome": "-2 HP (any) | Nothing"}
+      ]
+    },
+    {
+      "prompt": "You find an altar with an odd statue. Offerings have been placed before it",
+      "category": "Random",
+      "choices": [
+        {"text": "Offer a prayer", "outcome": "Reroll | -20% All Materials Debuff"},
+        {"text": "Leave an offering", "outcome": "Lose 1 Item + +30% All Materials Buff | Lose 1 Item + +20% All Materials Buff | Lose 1 Item"},
+        {"text": "Take the offerings", "outcome": "-5 HP (all) | +300 BP"}
+      ]
+    },
+    {
+      "prompt": "You see a tasty-looking fruit lying on the ground",
+      "category": "Random",
+      "choices": [
+        {"text": "Pick it up and eat it", "outcome": "-8 HP | +3 HP (all)"},
+        {"text": "Ignore it and move on", "outcome": "Nothing"}
+      ]
+    },
+    {
+      "prompt": "You look up and see a shooting star. If you make a wish now, it may come true!",
+      "category": "Random",
+      "choices": [
+        {"text": "Wish for HP recovery", "outcome": "+2 HP (all) | -2 HP (all)"},
+        {"text": "Wish for better materials", "outcome": "+10% All Materials Buff | Lose 1 Item"}
+      ]
+    },
+    {
+      "prompt": "You find what seems to be a vacant gas station. There's also an abandoned car here",
+      "category": "Random",
+      "choices": [
+        {"text": "Fill up the tank", "outcome": "Card +2"},
+        {"text": "Ignore it", "outcome": "Nothing"}
+      ]
+    },
+    {
+      "prompt": "You find a disused gym. This might be a good time to work out",
+      "category": "Random",
+      "choices": [
+        {"text": "Use treadmill", "outcome": "-3 HP (any) | +20% BP Buff"},
+        {"text": "Use dumbbells", "outcome": "-3 HP (any) | +30% BP Buff"},
+        {"text": "Use bench press", "outcome": "+50% BP Buff", "requirement": "Mobility 30"}
+      ]
+    },
+    {
+      "prompt": "You find an abandoned pharmacy. The interior has already been looted. There might still be something useful inside, though",
+      "category": "Random",
+      "choices": [
+        {"text": "Search inside", "outcome": "+3 HP (any) | -3 HP (any)"},
+        {"text": "Stealing is wrong", "outcome": "Nothing"}
+      ]
+    },
+    {
+      "prompt": "You find a strange device in an enemy base. You might be able to use it to detect materials",
+      "category": "Random",
+      "choices": [
+        {"text": "Press buttons at random", "outcome": "+10% Minerals Buff | Battle"},
+        {"text": "Whack it", "outcome": "+20% Minerals Buff | Nothing"},
+        {"text": "Take the device apart", "outcome": "+50% Minerals Buff", "requirement": "Analysis 30"}
+      ]
+    },
+    {
+      "prompt": "You hear the running water under some rocks. There may be a natural spring hidden here. Will you clear away the rocks?",
+      "category": "Random",
+      "choices": [
+        {"text": "Move the rocks", "outcome": "+2 HP (all) | Reroll"},
+        {"text": "Destroy the rocks", "outcome": "+2 HP (all) | -2 HP (all)"}
+      ]
+    },
+    {
+      "prompt": "You see a desert oasis in the distance. You might be able to rest there",
+      "category": "Random",
+      "choices": [
+        {"text": "Head for the oasis", "outcome": "Battle | +3 HP (all)"},
+        {"text": "It's just a mirage", "outcome": "Nothing"}
+      ]
+    },
+    {
+      "prompt": "You find what looks like a fast food restaurant. Gaku's worked in places like this before. He might be able to whip up something",
+      "category": "Random",
+      "choices": [
+        {"text": "Make a double cheeseburger", "outcome": "+3 HP (any)"},
+        {"text": "Make some fries", "outcome": "+1 HP (all) | -2 HP (all)"}
+      ]
+    },
+    {
+      "prompt": "Everyone looks exhausted. Nozomi suggests taking a break. She's also prepared some rations to perk everyone up",
+      "category": "Random",
+      "choices": [
+        {"text": "Just rest", "outcome": "+3 HP (all) | Battle"},
+        {"text": "Rest and take the food", "outcome": "+5 HP (all) | Battle"},
+        {"text": "Keep moving", "outcome": "-3 HP (all) | Move +5"}
+      ]
+    },
+    {
+      "prompt": "You're moving slower than usual. There might be something wrong with you",
+      "category": "Random",
+      "choices": [
+        {"text": "Stop and rest", "outcome": "+2 HP (Takumi) | Battle"},
+        {"text": "Press on regardless", "outcome": "-2 HP (Takumi)"},
+        {"text": "Get Nozomi to examine you", "outcome": "+5 HP (Takumi) + +30% BP Buff"}
+      ]
+    },
+    {
+      "prompt": "You find a magic circle in some ancient ruins. It seems infused with a mysterious power",
+      "category": "Random",
+      "choices": [
+        {"text": "Chant a spell", "outcome": "+10% Cloth Buff | Battle"},
+        {"text": "Make an offering", "outcome": "Lose 1 Item + +50% Cloth Buff | -2 HP (all)"},
+        {"text": "Get Kako to chant a spell", "outcome": "+50% Cloth Buff"}
+      ]
+    },
+    {
+      "prompt": "Darumi picked up a revolver from somewhere. She wants to play a game of Russian Roulette",
+      "category": "Random",
+      "choices": [
+        {"text": "Go along with it", "outcome": "+30% All Materials Buff | -15 HP (any)"},
+        {"text": "Firmly decline", "outcome": "-5 HP (any) | Nothing"}
+      ]
+    },
+    {
+      "prompt": "You see a tree with tasty-looking apples growing on it. Is there any way to pick them?",
+      "category": "Random",
+      "choices": [
+        {"text": "Climb the tree", "outcome": "+5 HP (any) | -5 HP (any) | +60 Plants"},
+        {"text": "Shake the tree", "outcome": "+5 HP (any) | -3 HP (all)"},
+        {"text": "Get Hiruko to cut it down", "outcome": "+5 HP (any) | +60 Plants"}
+      ]
+    },
+    {
+      "prompt": "Kako has a vision while resting at a nearby ruin. She says something bad will happen here",
+      "category": "Random",
+      "choices": [
+        {"text": "Leave quickly", "outcome": "Move +5 | -5 HP (any)"},
+        {"text": "Stick around", "outcome": "+1 HP (all) | -3 HP (all)"}
+      ]
+    },
+    {
+      "prompt": "Your stuff is stolen while you're resting. Aspiring detective Kako offers to investigate. Find a clue for her",
+      "category": "Random",
+      "choices": [
+        {"text": "Investigate round footprints", "outcome": "Battle + 300 BP | Lose 1 Item"},
+        {"text": "Investigate fur left behind", "outcome": "Lose 1 Item | +200 BP"},
+        {"text": "Look in everyone's pocket", "outcome": "Lose 1 Item | +200 BP"}
+      ]
+    },
+    {
+      "prompt": "Ima forages for some food. They all look quite unique, but he insists they're edible. Which will you try?",
+      "category": "Random",
+      "choices": [
+        {"text": "The red mushroom with white spots", "outcome": "+50% Minerals Buff"},
+        {"text": "The round red flower", "outcome": "+60 Cloth"},
+        {"text": "The glowing starfish", "outcome": "Card +2"}
+      ]
+    },
+    {
+      "prompt": "Shouma's fallen into a hole. He tells you to go on without him. What will you do?",
+      "category": "Random",
+      "choices": [
+        {"text": "Save him", "outcome": "-3 HP (any) | +20% Plants and Minerals Buff"},
+        {"text": "Encourage him", "outcome": "+10% Minerals Buff | +10% All Materials Buff"}
+      ]
+    },
+    {
+      "prompt": "You find an empty curry restaurant. Kurara is excited to try our spices she's never seen before. Rest here and make some curry?",
+      "category": "Random",
+      "choices": [
+        {"text": "Make mild curry", "outcome": "+1 HP (all)"},
+        {"text": "Make spicy curry", "outcome": "+50% Minerals Buff | Battle"},
+        {"text": "Now's not the time for curry", "outcome": "Nothing"}
+      ]
+    },
+    {
+      "prompt": "Darumi's feeling blue and unmotivated. Find a good way to cheer her up",
+      "category": "Random",
+      "choices": [
+        {"text": "Propose a game of poisoned chalice", "outcome": "+10% All Materials Buff | +10% All Materials Buff + -3 HP (any)"},
+        {"text": "Get her to snort some happy candy powder", "outcome": "+10% All Materials Buff + Move +1"}
+      ]
+    },
+    {
+      "prompt": "You found pudding. Takemaru wants to use it in a recipe. What should he make?",
+      "category": "Random",
+      "choices": [
+        {"text": "Pudding burger", "outcome": "-3 HP (all)"},
+        {"text": "Pudding curry", "outcome": "-5 HP (all)"},
+        {"text": "Stop him", "outcome": "+1 HP (all) | Nothing"}
+      ]
+    },
+    {
+      "prompt": "You find an abandoned enemy research lab. There are creatures preserved in formaldehyde here. Yugamu's dying to dissect them",
+      "category": "Random",
+      "choices": [
+        {"text": "Dissect the green goblin", "outcome": "-5 HP (any) | +60 Cloth"},
+        {"text": "Dissect the one-eyed bat", "outcome": "-5 HP (any) | +60 Minerals"},
+        {"text": "Dissect the man-eating plant", "outcome": "-5 HP (any) | +60 Plants"}
+      ]
+    },
+    {
+      "prompt": "Kyoshika is training with her sword. One day, she'll be the finest swordswoman in history...What technique is she trying to learn now?",
+      "category": "Random",
+      "choices": [
+        {"text": "Draw out the Holy Jumonji Sword's power", "outcome": "Nothing | +20% BP Buff"},
+        {"text": "Breathing methods to strengthen the body", "outcome": "+30 Cloth"},
+        {"text": "Triple wielding using the mouth", "outcome": "+30 Plants"}
+      ]
+    },
+    {
+      "prompt": "Yugamu wants to give you a massage. What will you do?",
+      "category": "Random",
+      "choices": [
+        {"text": "Let him", "outcome": "+3 HP (any) + +20% BP Buff"},
+        {"text": "Firmly decline", "outcome": "Nothing"}
+      ]
+    },
+    {
+      "prompt": "During an exploration, you ask Moko how you can get stronger. She shares a few of her favorite methods. Which one will you try?",
+      "category": "Random",
+      "choices": [
+        {"text": "Get plenty of rest", "outcome": "Battle | +3 HP (all)"},
+        {"text": "Eat plenty of food", "outcome": "+5 HP (any) | -5 HP (any)"},
+        {"text": "Fight in as many matches as possible", "outcome": "Nothing | +100% BP Buff | -5 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "It's time to get back on the road after a break. Moko's fallen into a deep sleep. What will you do?",
+      "category": "Random",
+      "choices": [
+        {"text": "Wake her up", "outcome": "+3 HP (all) | +50% Any Buff"},
+        {"text": "Rest a little longer", "outcome": "Varies"}
+      ]
+    },
+    {
+      "prompt": "You find some rice balls in an abandoned convenience store. Ima thinks they're too plain. How will you spice them up?",
+      "category": "Random",
+      "choices": [
+        {"text": "Smother them in ketchup and mayonnaise", "outcome": "Nothing | -5 HP (any)"},
+        {"text": "Fill them with strawberries instead of plums", "outcome": "+10 HP (any) | -5 HP (any)"}
+      ]
+    },
+    {
+      "prompt": "You find an electric lock in the enemy base. You need the correct password to open it",
+      "category": "Random",
+      "choices": [
+        {"text": "Type Password", "outcome": "Nothing"},
+        {"text": "Type 123456", "outcome": "Nothing"},
+        {"text": "Get Eva to open it", "outcome": "+50% Machines Buff"}
+      ]
+    },
+    {
+      "prompt": "Takemaru finds some old motorcycle parts. He wants to use them to modify his own bike. What mods should he make?",
+      "category": "Random",
+      "choices": [
+        {"text": "Add all-consuming inferno engine", "outcome": "Lose 3 Items | Move +5"},
+        {"text": "Add asphalt-ripping studded tires", "outcome": "-2 HP (all)"},
+        {"text": "Add autonomous handlebar", "outcome": "+60 Machines"}
+      ]
+    },
+    {
+      "prompt": "Eva complains of an intense headache. Her brainwashing may be coming undone. What now?",
+      "category": "Random",
+      "choices": [
+        {"text": "Massage her shoulders", "outcome": "+50% Machines Buff | -3 HP (Eva)"},
+        {"text": "Hypnotize her to sleep", "outcome": "Varies"}
+      ]
+    }
+  ]
+}

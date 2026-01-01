@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.neoseeker.com)",
+      "WebSearch",
+      "WebFetch(domain:steamcommunity.com)",
+      "WebFetch(domain:strategywiki.org)",
+      "WebFetch(domain:raiderking.com)",
+      "WebFetch(domain:cdn.discordapp.com)"
+    ]
+  }
+}
